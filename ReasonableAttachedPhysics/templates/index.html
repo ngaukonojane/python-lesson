@@ -1,0 +1,25 @@
+{% extends 'layouts.html'%}
+{% block content%}
+
+<table class="table">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Created at</th>
+    </tr>
+  </thead>
+
+  {%for blog in blogs%}
+  <tr>
+    <td>{{blog.id}}</td>
+    <td>{{blog.title}}</td>
+    <td>{{blog.entrytime}}</td>
+  </tr>
+  {%endfor%}
+</table>
+ <a href="{{url_for('add')}}"> <button type="button" name="button">Add Blog</button></a>
+
+
+
+{%endblock%}

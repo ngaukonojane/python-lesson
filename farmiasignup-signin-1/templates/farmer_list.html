@@ -1,0 +1,48 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+    <tr>
+        
+        <th>username</th>
+         <!-- <th>password</th> -->
+
+        <th>email</th>
+        <th>phone</th>
+        
+       
+        
+       
+
+        
+      </tr>
+    </thead>
+    <tbody>
+     {% for farmer in farmers %} 
+      <tr>
+        
+            
+             <td>{{farmer.username}}</td>
+              <td>{{farmer.email}}</td>
+             
+           
+            <td>{{farmer.phone}}</td>
+             <td>{{farmer.password}}</td>
+           
+           
+            
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+    </table>
+    <a href="{{url_for('add')}}"><button  class="btn btn-primary">Register</button></a>
+     
+    
+  </div>
+</body>
+{% endblock %}

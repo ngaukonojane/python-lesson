@@ -1,0 +1,24 @@
+{%extends'layout.html'}
+{%block content%}
+
+<body>
+
+    <div class="container">
+      <form action="{{url_for(results)}}"method = "POST">
+    
+  <div class="form-group">
+    <label for="val1">input value</label>
+    <input type="text" class="form control" id="val1"  placeholder="value"
+     name="val1">
+    
+  </div>
+  <div class="form-group">
+    <label for="val1">input value</label>
+    <input type="text" class="form-control" id="val1" placeholder="value2"
+    name="val2">
+  </div>
+  <button type="submit"  class="btw btw-primary">submit</button>
+  </form>
+  </div>
+</body>
+{%endblock%}
